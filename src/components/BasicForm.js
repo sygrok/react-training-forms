@@ -44,6 +44,11 @@ const BasicForm = (props) => {
 
   //Submit Handler
   const submitHandler = (event) => {
+    if (!formIsValid) {
+      //added if statement just in case if the user play with dev-tools
+      return alert("don't play with dev tools!");
+    }
+
     event.preventDefault();
     lastNameReset();
     nameReset();
